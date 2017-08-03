@@ -1,4 +1,4 @@
-(in-ns 'progress-visualizer.clj.lib.core)
+(in-ns 'lib.core)
 (require '[clojure.core.async :as async :refer [chan go timeout <! >!]])
 
 (defn set-interval

@@ -1,4 +1,4 @@
-(in-ns 'progress-visualizer.clj.lib.core)
+(in-ns 'lib.core)
 (require '[clojure.core.async :refer [chan go <! go-loop]])
 
 (def printer

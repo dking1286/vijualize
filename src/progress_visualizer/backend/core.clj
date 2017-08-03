@@ -1,6 +1,6 @@
-(ns progress-visualizer.clj.core
+(ns progress-visualizer.backend.core
   (:require [clojure.core.async :refer [go <!!]]
-            [progress-visualizer.clj.network.core :refer [get]]))
+            [network.core :refer [get]]))
 
 (defn handler
   [req]

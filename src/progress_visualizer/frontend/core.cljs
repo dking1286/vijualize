@@ -1,4 +1,4 @@
-(ns progress-visualizer.cljs.core
+(ns progress-visualizer.frontend.core
   (:require [d3 :as d3]))
 
 (enable-console-print!)

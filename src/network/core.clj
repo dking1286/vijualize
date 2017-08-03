@@ -1,9 +1,10 @@
-(ns progress-visualizer.clj.network.core
+(ns network.core
   (:require  [clojure.core.async :refer [chan go >!]]
              [clj-http.client :as client]))
 
 (defn get
   [url]
   (let [output (chan)]
-    (go (>! output (client/get url)))
+    (go (->> (client/get url)
+             (>! output)))
     output))

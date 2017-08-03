@@ -1,4 +1,4 @@
-(ns progress-visualizer.clj.lib.core)
+(ns lib.core)
 
 (load "./utils")
 (load "./periodically")
