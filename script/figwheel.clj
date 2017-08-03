@@ -2,8 +2,8 @@
          '[figwheel-sidecar.repl-api :as ra])
 
 (ra/start-figwheel!
-  {:figwheel-options {:server-port 3000
-                      :nrepl-port 7002
+  {:figwheel-options {:server-port 3005
+                      :nrepl-port 3006
                       :nrepl-middleware ["cemerick.piggieback/wrap-cljs-repl"]
                       :css-dirs ["resources/public/css"]}
    :build-ids ["dev"]
@@ -11,7 +11,7 @@
    [{:id "dev"
      :figwheel true
      :source-paths ["src"]
-     :compiler {:main 'medcircle-progress-visualizer.core
+     :compiler {:main 'progress-visualizer.cljs.core
                 :foreign-libs [{:file "node_modules/d3/build/d3.min.js"
                                 :provides ["d3"]}]
                 :asset-path "js"
