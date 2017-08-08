@@ -1,4 +1,4 @@
-(ns progress-visualizer.frontend.core
+(ns frontend.core
   (:require [lib.c3 :as c3]))
 
 (enable-console-print!)

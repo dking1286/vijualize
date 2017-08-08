@@ -1,4 +1,4 @@
-(ns progress-visualizer.backend.routes
+(ns backend.routes
   (:require [compojure.core :refer :all]
             [compojure.route :as route]))
 
