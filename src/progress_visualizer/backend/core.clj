@@ -1,9 +1,12 @@
 (ns progress-visualizer.backend.core
   (:require [clojure.core.async :refer [go <!!]]
-            [network.core :refer [get]]))
+            [ring.adapter.jetty :refer [run-jetty]]
+            [ring.middleware.defaults :refer [wrap-defaults api-defaults]]
+            [progress-visualizer.backend.routes :refer [router]]))
 
-(defn handler
-  [req]
-  (let [response (<!! (get "https://jsonplaceholder.typicode.com/posts/1"))]
-    {:status (:status response)
-     :body (str "This is the body: " (:body response))}))
+(def handler
+  (wrap-defaults router api-defaults))
+
+(defn -main
+  []
+  (run-jetty handler {:port 3000}))

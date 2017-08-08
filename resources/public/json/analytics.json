@@ -1,0 +1,9 @@
+{
+  "requests-per-day": [
+    { "day": 1, "requests": 10 },
+    { "day": 2, "requests": 19 },
+    { "day": 3, "requests": 32 },
+    { "day": 4, "requests": 41 },
+    { "day": 5, "requests": 57 }
+  ]
+}
